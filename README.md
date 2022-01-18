@@ -25,10 +25,10 @@ A sourcemap bug occurs when using
   ```
   
   Only the subsequent sources that only refer to the filenames are mapped (`server.ts`, `index.ts`, `same.ts`),
-  but these obviously point no where relative to the `sourceRoot` so they are invalid.
+  but these obviously point nowhere relative to the `sourceRoot` so they are invalid.
   
-  In addition, if two filenames are identical when importing from another package in the mono repo,
-  their entries get overidden (notice how there is only one `same.ts`).
+  Additionally, if two filenames are identical when importing from another package in the mono repo,
+  their entries get overridden (notice how there is only one `same.ts`).
   
   You can easily see this if you inspect the sourcemap on https://sourcemap-visualiser.vercel.app/
   A `sourcemap-info.json` file has already been generated.
